@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff6f6;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* SVG responsivo */
+#tree-container {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 12px 0 0 0;
+  box-sizing: border-box;
+}
+#tree-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 430px;
+}
+
+/* Texto dedicatoria */
+#dedication-text {
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin: 18px auto 0 auto;
+  max-width: 98vw;
+  padding: 10px 12px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #fc6f5833;
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+/* Firma */
+.signature {
+  display: block;
+  margin-top: 18px;
+  font-size: 1.05em;
+  color: #c1321f;
+  font-family: 'Pacifico', cursive, sans-serif;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.signature.visible {
+  opacity: 1;
+}
+
+/* Cuenta regresiva */
+#countdown {
+  font-size: 1.08em;
+  margin: 18px auto 0 auto;
+  max-width: 98vw;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #fc6f5833;
+  text-align: center;
+}
+
+/* Botón música */
+#music-btn {
+  font-size: 1.1em;
+  padding: 10px 18px;
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 99;
+  background: rgba(255,255,255,0.85);
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #fc6f5833;
+}
+
+/* Petalos flotantes */
+#floating-objects {
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+}
+.floating-petal {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle at 60% 40%, #fc6f58 70%, #fff0 100%);
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Animación typing */
+.typing {
+  border-right: 2px solid #fc6f58;
+  animation: blink-caret 0.8s step-end infinite;
+}
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fc6f58; }
+}
+
+/* Media queries para celulares */
+@media (max-width: 600px) {
+  #tree-container, #dedication-text, #countdown {
+    max-width: 99vw;
+    padding: 8px 4vw;
+    font-size: 1em;
+  }
+  #tree-container svg {
+    max-width: 99vw;
+  }
+  #music-btn {
+    font-size: 1em;
+    padding: 8px 12px;
+    bottom: 10px;
+    right: 10px;
+  }
+  .signature {
+    font-size: 1em;
+  }
+  .floating-petal {
+    width: 16px;
+    height: 16px;
+  }
+}
